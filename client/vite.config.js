@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://api.render.com/deploy/srv-cqlt4508fa8c73cgbnv0?key=J25yzeTFVJM',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
