@@ -24,7 +24,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        `/api/category/get-category`
+        "https://jumia-clone-backend.onrender.com/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -46,7 +46,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/product/product-list/${page}`
+        `https://jumia-clone-backend.onrender.com/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -60,7 +60,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        `/api/product/product-count`
+        `https://jumia-clone-backend.onrender.com/product/product-count`
       );
       setTotal(data?.total);
     } catch (error) {
@@ -78,7 +78,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/product/product-list/${page}`
+        `https://jumia-clone-backend.onrender.com/product/product-list/${page}`
       );
 
       // Check if data and data.products are valid
@@ -125,7 +125,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `/api/product/product-filter/`,
+        `https://jumia-clone-backend.onrender.com/product/product-filter/`,
         {
           checked,
           radio,
@@ -191,7 +191,7 @@ const HomePage = () => {
             {products?.map((p, index) => (
               <div className="card m-2" key={p._id || index}>
                 <img
-                  src={`/api/product/get-product-photo/${p._id}`}
+                  src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
