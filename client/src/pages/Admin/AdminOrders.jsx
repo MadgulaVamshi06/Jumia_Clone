@@ -24,7 +24,7 @@ const AdminOrders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        `/api/product/all-orders`
+        `https://jumia-clone-backend.onrender.com/product/all-orders`
       );
       setOrders(data.orders); // Ensure `data.orders` is set correctly
       console.log(data.orders);
@@ -98,7 +98,7 @@ const AdminOrders = () => {
                   <div className="row mb-2 p-3 card flex-row" key={p._id}>
                     <div className="col-4 col-md-3">
                       <img
-                        src={`/api/product/get-product-photo/${p._id}`}
+                        src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.name}
                         style={{ width: "100%", height: "auto" }}

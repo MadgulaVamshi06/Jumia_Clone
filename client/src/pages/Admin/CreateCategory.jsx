@@ -15,7 +15,7 @@ const CreateCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } =  await axios.post(`/api/category/create-category`,{
+      const { data } =  await axios.post(`https://jumia-clone-backend.onrender.com/category/create-category`,{
         name,
       });
       if (data?.success) {
@@ -33,7 +33,7 @@ const CreateCategory = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } =  await axios.get(`/api/category/get-category`)
+      const { data } =  await axios.get(`https://jumia-clone-backend.onrender.com/category/get-category`)
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -51,7 +51,7 @@ const CreateCategory = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`/api/category/update-category/${selected._id}`,
+      const { data } = await axios.put(`https://jumia-clone-backend.onrender.com/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data?.success) {
@@ -70,7 +70,7 @@ const CreateCategory = () => {
   //delete category
   const handleDelete = async (pId) => {
     try {
-      const { data } =await axios.delete(`/api/category/delete-category/${pId}`,
+      const { data } =await axios.delete(`https://jumia-clone-backend.onrender.com/category/delete-category/${pId}`,
       );
       if (data.success) {
         toast.success(`category is deleted`);

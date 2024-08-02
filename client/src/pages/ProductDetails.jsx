@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/product/get-product/${
+        `https://jumia-clone-backend.onrender.com/product/get-product/${
           params.slug
         }`
       );
@@ -38,7 +38,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `/api/product/related-product/${pid}/${cid}`
+        `https://jumia-clone-backend.onrender.com/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {
@@ -50,7 +50,7 @@ const ProductDetails = () => {
       <div className="row container product-details">
         <div className="col-md-6">
           <img
-            src={`/api/product/get-product-photo/${product._id}`}
+            src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
             height="300"
@@ -95,7 +95,7 @@ const ProductDetails = () => {
           {relatedProducts?.map((p) => (
             <div className="card m-2" key={p._id}>
               <img
-                src={`/api/product/get-product-photo/${p._id}`}
+                src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />

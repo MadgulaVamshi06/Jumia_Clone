@@ -48,7 +48,7 @@ const CartPage = () => {
   // get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get(`/api/product/braintree/token`);
+      const { data } = await axios.get(`https://jumia-clone-backend.onrender.com/product/braintree/token`);
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -64,7 +64,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post(`/api/product//braintree/payment`, {
+      const { data } = await axios.post(`https://jumia-clone-backend.onrender.com/product//braintree/payment`, {
         nonce,
         cart,
       });
@@ -101,7 +101,7 @@ const CartPage = () => {
             <div className="row card flex-row mb-3" key={p._id}>
               <div className="col-md-4 col-sm-12">
                 <img
-                  src={`${import.meta.env.VITE_REACT_APP_API}/product/get-product-photo/${p._id}`}
+                  src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                   width="100%"

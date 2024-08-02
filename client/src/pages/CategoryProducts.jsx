@@ -39,7 +39,7 @@ const CategoryProduct = () => {
               {products?.map((p) => (
                 <div className="card m-2" key={p._id}>
                   <img
-                      src={`/api/product/get-product-photo/${p._id}`}
+                      src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />

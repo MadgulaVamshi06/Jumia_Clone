@@ -10,7 +10,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `api/product/search/${values.keyword}`
+        `https://jumia-clone-backend.onrender.com//product/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");

@@ -11,7 +11,7 @@ export default function PrivateRoute() {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const res = await axios.get("/api/api/user-auth");
+        const res = await axios.get("https://jumia-clone-backend.onrender.com/api/user-auth");
         if (res.data.ok) {
           setOk(true);
         } else {

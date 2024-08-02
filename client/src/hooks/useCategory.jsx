@@ -6,7 +6,7 @@ export default function useCategory() {
 
   const getCategories = async () => {
     try {
-      const { data } =  await axios.get(`api/category/get-category`)
+      const { data } =  await axios.get(`https://jumia-clone-backend.onrender.com/category/get-category`)
       if (data?.success) {
         setCategories(data?.category);
       }

@@ -10,7 +10,7 @@ export default function AdminRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get(`/api/api/admin-auth`);
+      const res = await axios.get(`https://jumia-clone-backend.onrender.com/api/admin-auth`);
 
       if (res.data.ok) {
         setOk(true);

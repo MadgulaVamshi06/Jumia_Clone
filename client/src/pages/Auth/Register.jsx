@@ -18,7 +18,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `/api/api/register`,
+        `https://jumia-clone-backend.onrender.com/api/register`,
         {
           name,
           email,

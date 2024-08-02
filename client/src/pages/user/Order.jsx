@@ -11,7 +11,7 @@ const Order = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get(`/api/product/orders`);
+      const { data } = await axios.get(`https://jumia-clone-backend.onrender.com/product/orders`);
       setOrders(data);
     } catch (error) {
       console.log(error);
