@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`/api/login`,{
+      const res = await axios.post("https://jumia-clone-backend.onrender.com/api/login",{
         email,
         password,
       }); 
