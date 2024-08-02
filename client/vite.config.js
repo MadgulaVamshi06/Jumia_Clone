@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.render.com/deploy/srv-cqlt4508fa8c73cgbnv0?key=J25yzeTFVJM',
+        target: 'https://jumia-clone-backend.onrender.com/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
