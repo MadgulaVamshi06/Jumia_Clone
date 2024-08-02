@@ -24,7 +24,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        `/api/category/get-category`
+        `/category/get-category`
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -46,7 +46,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/product/product-list/${page}`
+        `/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -60,7 +60,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        `/api/product/product-count`
+        `/product/product-count`
       );
       setTotal(data?.total);
     } catch (error) {
@@ -78,7 +78,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/product/product-list/${page}`
+        `/product/product-list/${page}`
       );
 
       // Check if data and data.products are valid
@@ -125,7 +125,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `/api/product/product-filter/`,
+        `/product/product-filter/`,
         {
           checked,
           radio,
@@ -145,7 +145,7 @@ const HomePage = () => {
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
       <img
-        src="https://eg.jumia.is/cms/Home-Appliances-24/Deals-28th/women-bags/HPSlider712x384EN_B1.png"
+        src="https://ke.jumia.is/cms/2024/W31/CP/Kenya/Slider/S1.jpg"
         className="banner-img"
         alt="bannerimage"
         style={{ display: "block", margin: "0 auto", width: "90%" }}
@@ -191,7 +191,7 @@ const HomePage = () => {
             {products?.map((p, index) => (
               <div className="card m-2" key={p._id || index}>
                 <img
-                  src={`api/product/get-product-photo/${p._id}`}
+                  src={`/product/get-product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
