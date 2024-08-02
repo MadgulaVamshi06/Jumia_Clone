@@ -64,7 +64,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post(`https://jumia-clone-backend.onrender.com/product//braintree/payment`, {
+      const { data } = await axios.post(`https://jumia-clone-backend.onrender.com/product/braintree/payment`, {
         nonce,
         cart,
       });
