@@ -21,7 +21,7 @@ const Search = () => {
             {values?.results.map((p) => (
               <div key={p._id} className="card m-2" style={{ width: "18rem" }}>
                 <img
-                  src={`/api/product/get-product-photo/${p._id}`}
+                  src={`https://jumia-clone-backend.onrender.com/product/get-product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />

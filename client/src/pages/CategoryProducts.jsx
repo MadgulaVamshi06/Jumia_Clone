@@ -19,7 +19,7 @@ const CategoryProduct = () => {
   const getPrductsByCat = async () => {
     try {
       const { data } = await axios.get(
-        `/api/product/category-product/${params.slug}`
+        `https://jumia-clone-backend.onrender.com/product/category-product/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);

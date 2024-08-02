@@ -24,7 +24,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "https://jumia-clone-backend.onrender.com/category/get-category"
+         "https://jumia-clone-backend.onrender.com/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
