@@ -32,7 +32,7 @@ const SearchInput = () => {
           aria-label="Search"
           value={values.keyword}
           onChange={(e) => setValues({ ...values, keyword: e.target.value })}
-          style={{ width: "400px", height: "40px" }} // Adjust the width and height as needed
+          style={{ width: "400px", height: "40px" }} 
         />
 
         <button
